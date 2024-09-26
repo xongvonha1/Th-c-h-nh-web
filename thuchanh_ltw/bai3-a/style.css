@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 12px 50px;
+  font-size: larger;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Phần đầu trang */
+
+header {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 50px;
+  text-transform: uppercase;
+}
+
+/* Start menu css */
+nav {
+  height: 70px;
+  background: rgb(151, 151, 252);
+}
+
+nav ul li {
+  list-style-type: none;
+  float: left;
+  padding: 0 16px;
+  line-height: 70px;
+}
+
+nav ul li a {
+  line-height: 50px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* nav ul li a::before {
+  background: #cb7024;
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  top: 100%;
+  margin: 7px 0px;
+  transition: 0.3s;
+} */
+
+/* nav ul li a::after {
+  background: #cb7024;
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  top: 100%;
+  margin: 7px 0px;
+  transition: 0.3s;
+} */
+
+/* nav ul li a:hover::before {
+  width: 100%;
+  background: #cb7024;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  background: #cb7024;
+} */
+
+nav ul li a:hover {
+  color: #965017;
+}
+
+/* end css menu */
+
+/* phần đầu trang */
+
+/* phần thân trang */
+
+.container {
+  display: flex;
+  background-color: #f3f4f5;
+  margin: 12px 0px;
+}
+
+figure {
+  padding-top: 15px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+/* Phần thân trang */
+
+/* start footer */
+footer {
+  height: 100%;
+  background: rgb(151, 151, 252);;
+}
+
+footer p {
+  line-height: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* end css footer */

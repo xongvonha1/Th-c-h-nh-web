@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 12px 24px;
+}
+
+header h1 {
+  background-color: rgb(99, 62, 135);
+  color: azure;
+  height: 76px;
+  line-height: 76px;
+  margin: 0;
+  padding-left: 12px;
+  text-transform: uppercase;
+}
+
+.khoi1 {
+  background-color: aqua;
+  height: 500px;
+}
+
+.khoi2 {
+  background-color: black;
+  height: 500px;
+}
+
+/* bắt đầu css naviagation */
+
+nav {
+  background-color: #cfb7cd;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+nav ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-right: 1px solid #fefefe;
+  color: white;
+  text-transform: uppercase;
+}
+
+.menu ul {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background: #cfb7cd;
+  min-width: 240px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  padding: 0;
+}
+
+.menu > li a:hover,
+.menu li:hover > a {
+  background: #683e80;
+}
+
+.menu > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  top: 100%;
+}
+
+/* reponsive design */
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    display: block;
+    padding: 0;
+  }
+
+  .menu ul {
+    min-width: 100%;
+  }
+
+  .col-md-9 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* kết thúc css navigation */
+
+.container-fluid {
+  padding-bottom: 12px;
+  /* border: 1px solid white !important; */
+}
+
+figure {
+  border: 1.6px solid #000;
+}
+
+figure figcaption {
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 12px;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  min-width: 100%;
+}
+
+/* kết thúc css book */
+
+footer {
+  height: 100px;
+  background-color: #cfb7cd;
+}
+
+footer p {
+  line-height: 100px;
+  color: #fefefe;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+}
+
+.container-fluid {
+  grid-column: 1/4;
+  margin: 26px 26px;
+}
+
+.container-fluid input.form-control:hover {
+  background-color: rgb(132, 74, 53);
+}
+
+.container-fluid input.form-control:focus {
+  background-color: rgb(253, 226, 216);
+}
+
+.col-md-9 {
+  grid-column: 4/13;
+  width: auto;
+  margin: 18px 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-3 {
+  border: 1px solid black;
+  padding: 18px 18px;
+  margin: 5px 5px;
+}
+
+.col-md-9 img {
+  width: 200px;
+}

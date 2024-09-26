@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tranning web</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="#" method="post" class="form">
+        <div class="form-row">
+          <label for="txtChuoi" class="form-label">Chuỗi: </label>
+          <input class="form-input" type="text" name="txtChuoi" id="txtChuoi" />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="ddlDanhSach">Danh sách: </label>
+          <select
+            class="form-input"
+            id="ddlDanhSach"
+            onchange="change()"
+          ></select>
+        </div>
+        <div class="form-btn">
+          <input
+            class="input-btn"
+            type="button"
+            value="Thực hiện"
+            onclick="thuchien()"
+          />
+          <input class="input-btn" type="button" value="Hủy" onclick="huy()" />
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

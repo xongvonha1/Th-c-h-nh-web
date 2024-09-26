@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành web - 1b</title>
+    <style>
+      h1 {
+        color: red;
+        text-align: center;
+      }
+      #phude {
+        color: red;
+        text-align: center;
+      }
+      .end-content p {
+        color: red;
+        text-align: center;
+        padding-top: 20px;
+      }
+      .content {
+        padding-left: 56px;
+      }
+      .content ul li {
+        list-style-type: none;
+      }
+      .personal-information label {
+        width: 12%;
+        margin-bottom: 20px;
+      }
+      .personal-information input {
+        outline: none;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      .personal-information select {
+            outline: none;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .personal-information img {
+            padding-left: 34%;
+        }
+
+        .inp-send {
+            padding-top: 8px;
+        }
+        .inp-send input {
+            height: 25px;
+            margin: 0 4px;
+            float: right;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        .inp-send input:hover {
+            background-color: #ccc;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <h1>KHẢO SÁT Ý KIẾN</h1>
+    <p id="phude">
+      V/V: Các kỹ năng cần có để sinh viên thành công trong công việc
+    </p>
+    <p>
+      <b> Theo bạn đâu là kỹ năng cần thiết trong các kỹ năng sau: </b>
+    </p>
+    <div class="content">
+      <fieldset>
+        <legend>Kỹ năng cần có</legend>
+        <table>
+          <form action="" method="post">
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="muctieu"
+                      id="muc tieu"
+                      value="muctieu"
+                    /><label for="1">Kỹ năng đặt mục tiêu</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="sangtao"
+                      id="sangtao"
+                      value="sangtao"
+                    /><label for="sangtao">Sáng tạo trong công việc</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="langnghe"
+                      id="langnghe"
+                      value="langnghe"
+                    />
+                    <label for="langnghe"
+                      >Biết lắng nghe và học tập những lời phê bình</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="giaotiep"
+                      id="giaotiep"
+                      value="giaotiep"
+                    /><label for="giaotiep">Giao tiếp hiệu quả</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="tutin"
+                      id="tutin"
+                      value="tutin"
+                    /><label for="tutin"
+                      >Tự tin, năng động và lôi kéo người khác</label
+                    >
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="dongdoi"
+                      id="dongdoi"
+                      value="dongdoi"
+                    /><label for="dongdoi">Kỹ năng làm việc đồng đội</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="lanhdao"
+                      id="lanhdao"
+                      value="lanhdao"
+                    /><label for="lanhdao"
+                      >Kỹ năng lãnh đạo và khám phá bản thân</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="time"
+                      id="time"
+                      value="time"
+                    /><label for="time"
+                      >Kỹ năng tổ chức công việc và quản lý thời gian</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="quyetdinh"
+                      id="quyetdinh"
+                      value="quyetdinh"
+                    /><label for="quyetdinh">Kỹ năng quyết định</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="giaiquyet"
+                      id="giaiquyet"
+                      value="giaiquyet"
+                    /><label for="giaiquyet">Kỹ năng giải quyết vấn đề</label>
+                  </li>
+                </ul>
+              </td>
+              <label for="ykien">Ý kiến khác: </label>
+              <textarea name="ykien" id="ykien"></textarea>
+            </tr>
+          </form>
+        </table>
+      </fieldset>
+      <div class="personal-information">
+        <fieldset>
+          <legend>Thông tin cá nhân</legend>
+          <form action="" method="post">
+            <table>
+              <tr>
+                <td>
+                  <label for="hoten">Họ và tên: </label>
+                  <input type="text" name="hoten" id="hoten" />
+                  <br />
+                  <label for="tuoi">Độ tuổi</label>
+                  <select name="tuoi" id="tuoi">
+                    <option value="10-20">10-20</option>
+                    <option value="20-30">20-30</option>
+                    <option value="30-40">30-40</option>
+                    <option value="40-50">40-50</option>
+                  </select>
+                  <br />
+                  <label for="gioitinh">Giới tính: </label>
+                  <input
+                    type="radio"
+                    name="gioitinh"
+                    id="gioitinh"
+                    value="nam"
+                  />Nam
+                  <input
+                    type="radio"
+                    name="gioitinh"
+                    id="gioitinh"
+                    value="nữ"
+                  />Nữ
+                </td>
+                <td><img src="image.png" alt="anhdothi" width="150px" /></td>
+              </tr>
+            </table>
+          </form>
+        </fieldset>
+      </div>
+      <div class="inp-send">
+        <input type="submit" name="Gửi khảo sát" id="submit" />
+        <input type="reset" name="Làm lại" id="reset" />
+      </div>
+    </div>
+    <div class="end-content"><p>Cảm ơn bạn đã tham gia khảo sát!</p></div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  float: left;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+figure{
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(157, 157, 229);
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: bold;
+}
+
+summary{
+    cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}

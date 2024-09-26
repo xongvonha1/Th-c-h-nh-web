@@ -1,0 +1,49 @@
+body {
+  padding: 0 10px;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+/* css navigation */
+.nav-header {
+  display: flex;
+}
+
+.nav-header .items {
+  padding: 0 22%;
+}
+/* css navigation */
+
+.content {
+  display: flex;
+}
+
+.content .content-items {
+  padding-left: 144px;
+}
+
+footer {
+  background-color: rgba(207, 184, 184, 0.982);
+  height: 48px;
+  padding-bottom: 10px;
+}
+
+footer p {
+  text-align: center;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+/* css về đầu trang */
+.back-to-top {
+  float: right;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* css về đầu trang */

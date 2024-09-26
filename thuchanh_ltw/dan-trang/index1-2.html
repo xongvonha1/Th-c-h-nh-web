@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+        }
+        header{
+            background-color: #333;
+            padding: 30px;
+            color: #fff;
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        html{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+        h3:hover{
+            color: aquamarine;
+        }
+        .menu ul {
+    list-style-type: none;
+            
+        }
+        .menu li{
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: dimgray;
+            color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        /* đỏi màu khối thể li */
+        .menu li:hover{
+            background-color: rgb(173, 171, 171);
+        }
+        .content{
+            width: 100%;
+            /* Sắp xếp nội dung sao cho các dòng có chiều rộng bằng nhau */
+            text-align: justify;
+        }
+        .content .chitiet{
+            text-align: right;
+        }
+        .content .chitiet a{
+            color: chocolate;
+            text-decoration: none;
+        }
+        /* Đổi màu chữ chi tiết */
+        .content .chitiet a:hover{
+            color: coral;
+        }
+        .aside{
+            background-color: bisque;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        .aside img{
+            width: 99%;
+            height: 70%;
+        }
+        .footer{
+            background-color: #666;
+            color: #fff;
+            text-align: center;
+            font-size: 13px;
+            padding: 30px;
+        }
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}.col-2 {width: 16.66%;}.col-3 {width: 25%;}.col-4 {width: 33.33%;}.col-5 {width: 41.66%;}.col-6 {width: 50%;} .col-7 {width: 58.33%;}.col-8 {width: 66.66%;}.col-9 {width: 75%;}.col-10 {width: 83.33%;}.col-11 {width: 91.66%;}.col-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chợ việc làm</h1>
+    </header>
+    <div class="row">
+        <div class="col-3 menu">
+            <ul>
+                <li>CNTT</li>
+                <li>GIÁO DỤC</li>
+                <li>KIẾN THỨC</li>
+                <li>KINH TẾ</li>
+            </ul>
+        </div>
+        <div class="col-6 ">
+            <h3 style="font-weight: bold ; text-transform: uppercase;">
+                cơ hội nghề nghiệp dành cho sinh viên cntt
+            </h3>
+            <div class="content">
+                <h3><a href="index1-1.html">Trưởng nhóm lập trình</a></h3>
+                <p>
+                    Team leader - Trưởng nhóm lập trình là công việc thường 
+                    thấy của dân IT khi có 3-5 năm kinh nghiệm...
+                </p>
+                <p class="chitiet"><a href="index1-1.html" target="blank">Chi tiết</a></p>
+            </div>
+            <div class="content">
+                <h3><a href="index1-1.html">Chuyên gia phân tích dữ liệu</a></h3>
+                <p>Ngoài việc trở thành nhóm lập trình, sinh viên IT có thể đảm nhiệm vị trí data analyst - chuyên gia phân
+                    tích dữ liệu, với mức lương 800-1000 USD...</p>
+                <p class="chitiet"><a href="index1-2.html" target="blank">Chi tiết</a></p>
+            </div>
+            <div class="content">
+                <h3><a href="index1-1.html">Lập trình viên về web</a></h3>
+                <p>Web developer - Lập trình viên về web là vị trí của các sinh viên IT khi mới ra trường với kinh nghiệm 1-3
+                    năm...
+                </p>
+                <p class="chitiet"><a href="index1-1.html" target="blank">Chi tiết</a></p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="aside">
+                <img src="upload\img\success.png" alt="ảnh" title="hinh_anh_success" width="200px" >
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Design by The Anh.</p>
+    </div>
+</body>
+</html>

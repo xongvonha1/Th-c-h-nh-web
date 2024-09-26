@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai thuc hanh b4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container{
+            border: 1px solid black;
+            width: 500px;
+            padding: 50px;
+            margin: 100px auto;
+            background: #F0A982;
+        }
+
+        #ddlDanhsachhangsx{
+            padding: 3px  30px;
+            margin: 10px;
+        }
+
+        #txtHang{
+            padding: 3px 30px;
+            margin: 10px;
+        }
+        
+        button{
+            padding: 3px 30px;
+            margin-top: 10px;
+            margin-left: 15px;
+            float: right;
+            border: 1px solid black;
+            
+            
+        }
+
+        button:hover{
+            background: whitesmoke;
+            border: 1px solid white;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="ddlDanhsachhangsx">Danh sách hãng sản xuất CPU</label>
+        <select name="ddlDanhsachhangsx" id="ddlDanhsachhangsx"></select>
+        <br>
+        <label for="txtHang" class="hidden" id="lblHang">Hãng</label>
+        <input type="text", class="hidden" id="txtHang">
+        <br>
+        <button id="btnLuu" class="hidden">Lưu</button>
+        <button id="btnThem">Thêm</button>
+        <button id="btnHuy">Hủy</button>
+    </div>
+    <script>
+        var ddlDanhsachhangsx =["Intel", "AMD", "Apple", "Asus"];
+        // 
+        var selectBox = document.getElementById("ddlDanhsachhangsx");
+
+        // 
+        ddlDanhsachhangsx.forEach(function(hangSX){
+            var option = document.createElement("option");
+            option.text = hangSX;
+            option.value = hangSX;
+
+            selectBox.appendChild(option);
+
+        });
+
+      var txtHang = document.getElementById("txtHang") ;
+      var lblHang = document.getElementById("lblHang");
+      var btnThem = document.getElementById("btnThem");
+      var btnHuy = document.getElementById("btnHuy");
+      var btnLuu = document.getElementById("btnLuu");
+
+      // xử lý sự liện nút thêm
+      btnThem.addEventListener("click", function(){
+        // Hiện các phần tử ẩn
+        lblHang.classList.remove("hidden");
+        txtHang.classList.remove("hidden");
+        btnLuu.classList.remove("hidden");
+
+        btnThem.classList.add("hidden");
+      });
+
+      // xử lý sự kiện nút lưu
+      btnLuu.addEventListener("click", function() {
+            var newHangSX = txtHang.value.trim();
+            if (newHangSX !== "") {
+                var option = document.createElement("option");
+                option.text = newHangSX;
+                option.value = newHangSX;
+                selectBox.appendChild(option);
+                
+                // Ẩn các phần tử sau khi thêm mới thành công
+                txtHang.value = ""; // Clear textbox
+                txtHang.classList.add("hidden");
+                lblHang.classList.add("hidden");
+                btnLuu.classList.add("hidden");
+               
+                btnThem.classList.remove("hidden");
+                alert("Thông tin dữ liệu đã được lưu");
+            } else {
+                alert("Vui lòng nhập tên hãng sản xuất!");
+            }
+        });
+        btnHuy.addEventListener("click", function(){
+                txtHang.value = ""; // Clear textbox
+                txtHang.classList.add("hidden");
+                lblHang.classList.add("hidden");
+                btnLuu.classList.add("hidden");
+               
+                btnThem.classList.remove("hidden");
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

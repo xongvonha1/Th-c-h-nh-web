@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            }
+
+            body{
+                background: #F0c3d6;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+            }
+
+            .container{
+            background: #F0A982;
+            border: 1px solid black;
+            width: 300px;
+            padding: 50px;
+            margin: 100px auto;
+            margin-bottom: 50px;
+            }
+
+            input{
+            margin: 10px;
+            padding: 1px 16px;
+            }
+
+            button{
+            float: right;
+            margin: 10px;
+            padding: 4px 15px;
+            }
+
+            button:hover{
+            background: white;
+            border: 0px solid white;
+            }
+            /* Viền 1 chạm */
+            table{
+                border-collapse: collapse;
+            }
+
+            .table{
+            width: 400px;
+            padding: 50px;
+            margin: 50px auto;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class= "container" >
+        <label id="lblTen" for="fTen">Tên VXL </label>
+        <input type="text" id="fTen" >
+        <br>
+        <label id="lblHang" for="fHang">Hãng</label>
+        <input type="text" id="fHang">
+        <br>
+        <label id="lblNgay" for="fNgay">Ngày ra mắt</label>
+        <input id="fNgay" type="date">
+        <br>
+        <label id="lblGia" for="fGia">Giá</label>
+        <input id="fGia" type="text" >
+        
+        <br>
+        <button id="btnThem" >Them</button>
+        <button id="btnHuy" >Huy</button>
+      </div>
+      
+      <div class= "table ">
+        <table id="infoTable" border=1>
+            <thead>
+              <tr style= "background: #a982f0;">
+                <td>STT</td>
+                <td>Tên VXL</td>
+                <td>Hãng sx</td>
+                <td>Ngày ra mắt</td>
+                <td>Giá (vnd)</td>
+              </tr>
+            </thead>
+            <tbody style="background: white;">
+      <!--    Các dòng dữ liệu sẽ được thêm ở đây bằng JavaScript      -->
+            </tbody>
+        </table>
+        <div>
+
+            <script>
+                // Lấy đối tượng tbody
+                var tbody = document.querySelector("#infoTable tbody");
+
+                // Tạo hàng dữ liệu đầu tiên
+                var row1 = tbody.insertRow();
+                var cell1_1 = row1.insertCell(0);
+                var cell1_2 = row1.insertCell(1);
+                var cell1_3 = row1.insertCell(2);
+                var cell1_4 = row1.insertCell(3);
+                var cell1_5 = row1.insertCell(4);
+
+                // Thiết lập dữ liệu cho hàng đầu tiên
+                cell1_1.innerHTML = tbody.rows.length; // STT
+                cell1_2.innerHTML = "Core i3 7100"; // Tên VXL
+                cell1_3.innerHTML = "Intel"; // Hãng
+                cell1_4.innerHTML = "2012-08-21"; // Ngày ra mắt
+                cell1_5.innerHTML = "5000000"; // Giá
+
+                // Tạo hàng dữ liệu thứ hai
+                var row2 = tbody.insertRow();
+                var cell2_1 = row2.insertCell(0);
+                var cell2_2 = row2.insertCell(1);
+                var cell2_3 = row2.insertCell(2);
+                var cell2_4 = row2.insertCell(3);
+                var cell2_5 = row2.insertCell(4);
+
+                // Thiết lập dữ liệu cho hàng thứ hai
+                cell2_1.innerHTML = tbody.rows.length; // STT
+                cell2_2.innerHTML = "Core i5 7200"; // Tên VXL
+                cell2_3.innerHTML = "Intel"; // Hãng
+                cell2_4.innerHTML = "2012-08-21"; // Ngày ra mắt
+                cell2_5.innerHTML = "4500000"; // Giá
+
+        
+                var btnThem = document.getElementById("btnThem");
+                var btnHuy = document.getElementById("btnHuy");
+
+                btnThem.addEventListener("click", function(){
+                var ten = document.getElementById("fTen").value;
+                var hang = document.getElementById("fHang").value;
+                var ngay = document.getElementById("fNgay").value;
+                var gia = document.getElementById("fGia").value;
+                
+                var table = document.getElementById("infoTable").getElementsByTagName('tbody')[0];
+                var newRow = table.insertRow(table.rows.length);
+                
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                var cell5 = newRow.insertCell(4);
+
+                // Kiểm tra giá và ngày hợp lệ
+            // var isValid = true;
+            // if (parseFloat(gia) <= 0 || isNaN(parseFloat(gia))) {
+            //     alert("Giá phải lớn hơn 0");
+            //     isValid = false;
+            // }
+            
+            // var inputDate = new Date(ngay);
+            // var currentDate = new Date();
+            // if (inputDate < currentDate) {
+            //     alert("Ngày ra mắt phải là hiện tại hoặc trong tương lai");
+            //     isValid = false;
+            // }
+            
+            // Nếu dữ liệu không hợp lệ, dừng lại và không thêm vào bảng
+            // if (!isValid) {
+            //     return;
+            // }
+            var errorMessage = "";
+
+                // Kiểm tra trùng lặp
+            var isNameDuplicate = false;
+            var isDuplicate = false;
+            var rows = table.getElementsByTagName("tr");
+            for (var i = 0; i < rows.length; i++) {
+                var rowCells = rows[i].getElementsByTagName("td");
+                var rowTen = rowCells[1].innerHTML.trim();
+                if (rowTen === ten) {
+                    isNameDuplicate = true;
+                    errorMessage += "Tên VXL đã tồn tại trong bảng!\n";
+                    break;
+                }
+            }
+
+            // Kiểm tra giá và ngày hợp lệ
+            if (parseFloat(gia) <= 0 || isNaN(parseFloat(gia))) {
+                errorMessage += "Giá phải lớn hơn 0.\n";
+            }
+
+            var inputDate = new Date(ngay);
+            var currentDate = new Date();
+            if (inputDate < currentDate) {
+                errorMessage += "Ngày phải là hiện tại hoặc trong tương lai.\n";
+            }
+            
+            // Nếu có lỗi, hiển thị hộp thoại alert
+            if (errorMessage !== "") {
+                alert(errorMessage);
+                return;
+            }
+
+            // Tiếp tục thêm dữ liệu vào bảng nếu không có lỗi
+            var newRow = table.insertRow(table.rows.length);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
+            
+            cell1.innerHTML = table.rows.length;
+            cell2.innerHTML = ten;
+            cell3.innerHTML = hang;
+            cell4.innerHTML = ngay;
+            cell5.innerHTML = gia;
+            
+            // Reset form after adding row
+            document.getElementById("fTen").value = "";
+            document.getElementById("fHang").value = "";
+            document.getElementById("fNgay").value = "";
+            document.getElementById("fGia").value = "";
+                
+        });
+
+                // btn huy
+
+                btnHuy.addEventListener("click", function(){
+                fTen.value = "";
+                fHang.value = "";
+                fNgay.value = "dd/mm/yyyy";
+                fGia.value = "";
+                });
+            </script>
+</body>
+</html>

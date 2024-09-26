@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành web - bài 6</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form  class="form">
+            <div class="form-row">
+                <label class="form-label" for="ngaysinh">Ngày sinh: </label>
+                <input class="form-input" type="date" name="txtNgaysinh" id="ngaysinh" value="">
+            </div>
+            <div class="form-row">
+                <label class="form-label"  for="cung">Cung: </label>
+                <input disabled name="txtCung" class="form-input" id="cung" onchange="change()">
+            </div class="form-row">
+            <div class="form-btn">
+                <button type="button" class="input-btn "onclick="xem()">Xem</button>
+                <button type="button" class="input-btn" onclick="xoa()">Xóa</button>
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

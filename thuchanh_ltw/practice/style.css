@@ -1,0 +1,41 @@
+html {
+  font-size: larger;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.form {
+  border: 1px solid #000;
+  padding: 50px;
+}
+
+.form-row {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.form-row .form-label {
+  min-width: 90px;
+}
+
+.form-row .form-input {
+  min-width: 200px;
+  font-size: larger;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-btn .input-btn {
+  padding: 10px 10px;
+  margin-left: 12px;
+  margin-top: 15px;
+  color: #fff;
+  background: #000;
+}
